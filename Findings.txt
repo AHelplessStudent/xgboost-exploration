@@ -1,0 +1,56 @@
+Can save the model in a json format, this exposes every tree in the "trees" list. 
+Can alter the saved model by parsing all trees then cutting. model can still be loaded fine after cutting one node. Kernel dies when trying to predict tho. script also crashes with no error.
+
+Cutting both leafs off a parent node fixes the crashing
+althouhg im unsure of what value i leave the new node with. 
+sum of the two leafs?
+the cut value?
+
+
+Booster.trees_to_dataframe() might be an easy way of altering the finished trees. Need to find a way to set trees from dataframe.
+
+"Parse a boosted tree model text dump into a pandas DataFrame structure." might just be the dump_model output.
+Has most of the infos on trees needed
+
+cover = sum_hessian
+gain = loss_changes for nodes and split_condition for leafs
+split = split_condition for nodes NaN for leafs
+Yes and No is left or right
+Missing?
+Feature = split_indecies >0 is a feature, 0 indicates leaf
+
+Possible solution is writing a dataframe to json function.
+That way i can use dataframes to sort out candidate leaf nodes to cut, then randomly cut a number of those.
+altering the dataframe then running the dataframe to json func, then load model.
+
+steps:
+train model
+save model to json
+booster = model.get_booster()
+booster.trees_to_dataframe()
+identify leaf nodes
+choose 1/10 of nodes and cut
+	cutting:
+	feature fx -> leaf
+	split 	x -> NaN
+	yes 	x -> NaN
+	no 	x -> NaN
+	missing x -> NaN
+	Gain    large num -> small num ??? loss_changes to split_condition ?
+	Cover   sum_hessian stay the same ???
+	remove leafs
+run dataframe to json
+save that json over trees list in the model json. 
+(keep "base_weights" and remove the leaf nodes base_weights)
+(alter tree_param to reflect changes)
+save model json as dt-modified-jsonfile.json
+create XGDClassifier
+xgd.load_model("dt-modified-jsonfile.json")
+
+
+Use xgboost library to further explore results of the cuts.	
+
+
+cutting is done by removing one or two leaf nodes then altering the parent node to be a leaf node. (needs to be tested)
+
+todo find out what base-weight
