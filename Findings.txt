@@ -6,6 +6,12 @@ althouhg im unsure of what value i leave the new node with.
 sum of the two leafs?
 the cut value?
 
+Links:
+https://github.com/dmlc/xgboost/blob/master/demo/json-model/json_parser.py
+https://xgboost.readthedocs.io/en/stable/python/python_api.html#xgboost.Booster.trees_to_dataframe
+https://www.youtube.com/watch?v=D0efHEJsfHo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=42
+https://stackoverflow.com/questions/70586078/manipulation-and-interpretation-of-xgboost-models-in-python
+
 
 Booster.trees_to_dataframe() might be an easy way of altering the finished trees. Need to find a way to set trees from dataframe.
 
@@ -30,7 +36,7 @@ booster = model.get_booster()
 booster.trees_to_dataframe()
 identify leaf nodes
 choose 1/10 of nodes and cut
-	cutting:
+	cutting: (take weighted avg. of the two observations(leaf nodes)) might need access to the training data at this stage. (take the cuts up to the parent node, then calculate the new value for the new leaf node.)
 	feature fx -> leaf
 	split 	x -> NaN
 	yes 	x -> NaN
@@ -46,6 +52,8 @@ save that json over trees list in the model json.
 save model json as dt-modified-jsonfile.json
 create XGDClassifier
 xgd.load_model("dt-modified-jsonfile.json")
+
+
 
 
 Use xgboost library to further explore results of the cuts.	
