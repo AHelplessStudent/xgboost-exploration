@@ -1,1 +1,132 @@
-{"learner": {"attributes": {"best_iteration": "0", "best_ntree_limit": "1", "scikit_learn": "{\"use_label_encoder\": null, \"n_estimators\": 1, \"objective\": \"multi:softprob\", \"max_depth\": 3, \"max_leaves\": null, \"max_bin\": null, \"grow_policy\": null, \"learning_rate\": 1, \"verbosity\": null, \"booster\": null, \"tree_method\": null, \"gamma\": null, \"min_child_weight\": null, \"max_delta_step\": null, \"subsample\": null, \"sampling_method\": null, \"colsample_bytree\": null, \"colsample_bylevel\": null, \"colsample_bynode\": null, \"reg_alpha\": null, \"reg_lambda\": null, \"scale_pos_weight\": null, \"base_score\": null, \"missing\": NaN, \"num_parallel_tree\": null, \"random_state\": null, \"n_jobs\": null, \"monotone_constraints\": null, \"interaction_constraints\": null, \"importance_type\": null, \"gpu_id\": null, \"validate_parameters\": null, \"predictor\": null, \"enable_categorical\": false, \"feature_types\": null, \"max_cat_to_onehot\": null, \"max_cat_threshold\": null, \"eval_metric\": null, \"early_stopping_rounds\": null, \"callbacks\": null, \"classes_\": [0, 1, 2], \"n_classes_\": 3, \"_estimator_type\": \"classifier\"}"}, "feature_names": [], "feature_types": [], "gradient_booster": {"model": {"gbtree_model_param": {"num_parallel_tree": "1", "num_trees": "3", "size_leaf_vector": "0"}, "tree_info": [0, 1, 2], "trees": [{"base_weights": [-4.388072e-08], "categories": [], "categories_nodes": [], "categories_segments": [], "categories_sizes": [], "default_left": [0], "id": 0, "left_children": [-1], "loss_changes": [57.32271], "parents": [2147483647], "right_children": [-1], "split_conditions": [2.45], "split_indices": [0], "split_type": [0], "sum_hessian": [53.33333], "tree_param": {"num_deleted": "0", "num_feature": "4", "num_nodes": "1", "size_leaf_vector": "0"}}, {"base_weights": [0.018404864, -0.7100592, 0.39209723, 1.1904762, -0.64429533, 1.3636364, -3.2511625e-08, -2.5544848e-08, -0.70072997], "categories": [], "categories_nodes": [], "categories_segments": [], "categories_sizes": [], "default_left": [1, 0, 1, 1, 1, 0, 0, 0, 0], "id": 1, "left_children": [1, -1, 3, 5, 7, -1, -1, -1, -1], "loss_changes": [15.069112, 0.0, 31.014328, 4.3290043, 0.6019697, 0.0, 0.0, 0.0, 0.0], "parents": [2147483647, 0, 0, 2, 2, 3, 3, 4, 4], "right_children": [2, -1, 4, 6, 8, -1, -1, -1, -1], "split_conditions": [2.45, -0.7100592, 1.75, 4.95, 4.8500004, 1.3636364, -3.2511625e-08, -2.5544848e-08, -0.70072997], "split_indices": [2, 0, 3, 2, 2, 0, 0, 0, 0], "split_type": [0, 0, 0, 0, 0, 0, 0, 0, 0], "sum_hessian": [53.33333, 17.777777, 35.555553, 19.999998, 15.555554, 17.333332, 2.6666665, 1.3333333, 14.222221], "tree_param": {"num_deleted": "0", "num_feature": "4", "num_nodes": "9", "size_leaf_vector": "0"}}, {"base_weights": [-0.018404953, -0.70031554, 1.1767956, -0.72631586, -0.3658537, 0.2926829, 1.3489933, -2.5544848e-08, -0.5172414, -0.12000003, 0.59999996, 0.4285714, 1.4014598], "categories": [], "categories_nodes": [], "categories_segments": [], "categories_sizes": [], "default_left": [1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0], "id": 2, "left_children": [1, 3, 5, -1, 7, 9, 11, -1, -1, -1, -1, -1, -1], "loss_changes": [45.10687, 0.040575027, 2.666933, 0.0, 0.25231284, 0.6497562, 0.19886589, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "parents": [2147483647, 0, 0, 1, 1, 2, 2, 4, 4, 5, 5, 6, 6], "right_children": [2, 4, 6, -1, 8, 10, 12, -1, -1, -1, -1, -1, -1], "split_conditions": [4.75, 1.45, 1.75, -0.72631586, 5.75, 5.05, 4.8500004, -2.5544848e-08, -0.5172414, -0.12000003, 0.59999996, 0.4285714, 1.4014598], "split_indices": [2, 3, 3, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0], "split_type": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "sum_hessian": [53.33333, 34.22222, 19.11111, 30.666664, 3.5555553, 3.5555553, 15.555554, 1.3333333, 2.222222, 1.7777777, 1.7777777, 1.3333333, 14.222221], "tree_param": {"num_deleted": "0", "num_feature": "4", "num_nodes": "13", "size_leaf_vector": "0"}}]}, "name": "gbtree"}, "learner_model_param": {"base_score": "5E-1", "boost_from_average": "1", "num_class": "3", "num_feature": "4", "num_target": "1"}, "objective": {"name": "multi:softprob", "softmax_multiclass_param": {"num_class": "3"}}}, "version": [1, 7, 5]}
+{
+  "learner": {
+    "attributes": {
+      "best_iteration": "0",
+      "best_ntree_limit": "1",
+      "scikit_learn": "{\"use_label_encoder\": null, \"n_estimators\": 1, \"objective\": \"multi:softprob\", \"max_depth\": 3, \"max_leaves\": null, \"max_bin\": null, \"grow_policy\": null, \"learning_rate\": 1, \"verbosity\": null, \"booster\": null, \"tree_method\": null, \"gamma\": null, \"min_child_weight\": null, \"max_delta_step\": null, \"subsample\": null, \"sampling_method\": null, \"colsample_bytree\": null, \"colsample_bylevel\": null, \"colsample_bynode\": null, \"reg_alpha\": null, \"reg_lambda\": null, \"scale_pos_weight\": null, \"base_score\": null, \"missing\": NaN, \"num_parallel_tree\": null, \"random_state\": null, \"n_jobs\": null, \"monotone_constraints\": null, \"interaction_constraints\": null, \"importance_type\": null, \"gpu_id\": null, \"validate_parameters\": null, \"predictor\": null, \"enable_categorical\": false, \"feature_types\": null, \"max_cat_to_onehot\": null, \"max_cat_threshold\": null, \"eval_metric\": null, \"early_stopping_rounds\": null, \"callbacks\": null, \"classes_\": [0, 1, 2], \"n_classes_\": 3, \"_estimator_type\": \"classifier\"}"
+    },
+    "feature_names": [],
+    "feature_types": [],
+    "gradient_booster": {
+      "model": {
+        "gbtree_model_param": {
+          "num_parallel_tree": "1",
+          "num_trees": "3",
+          "size_leaf_vector": "0"
+        },
+        "tree_info": [0, 1, 2],
+        "trees": [
+          {
+            "base_weights": [-4.388072e-8],
+            "categories": [],
+            "categories_nodes": [],
+            "categories_segments": [],
+            "categories_sizes": [],
+            "default_left": [0],
+            "id": 0,
+            "left_children": [-1],
+            "loss_changes": [57.32271],
+            "parents": [2147483647],
+            "right_children": [-1],
+            "split_conditions": [2.45],
+            "split_indices": [0],
+            "split_type": [0],
+            "sum_hessian": [53.33333],
+            "tree_param": {
+              "num_deleted": "0",
+              "num_feature": "4",
+              "num_nodes": "1",
+              "size_leaf_vector": "0"
+            }
+          },
+          {
+            "base_weights": [
+              0.018404864, -0.7100592, 0.39209723, 1.1904762, -0.64429533,
+              1.3636364, -3.2511625e-8, -2.5544848e-8, -0.70072997
+            ],
+            "categories": [],
+            "categories_nodes": [],
+            "categories_segments": [],
+            "categories_sizes": [],
+            "default_left": [1, 0, 1, 1, 1, 0, 0, 0, 0],
+            "id": 1,
+            "left_children": [1, -1, 3, 5, 7, -1, -1, -1, -1],
+            "loss_changes": [
+              15.069112, 0.0, 31.014328, 4.3290043, 0.6019697, 0.0, 0.0, 0.0,
+              0.0
+            ],
+            "parents": [2147483647, 0, 0, 2, 2, 3, 3, 4, 4],
+            "right_children": [2, -1, 4, 6, 8, -1, -1, -1, -1],
+            "split_conditions": [
+              2.45, -0.7100592, 1.75, 4.95, 4.8500004, 1.3636364, -3.2511625e-8,
+              -2.5544848e-8, -0.70072997
+            ],
+            "split_indices": [2, 0, 3, 2, 2, 0, 0, 0, 0],
+            "split_type": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "sum_hessian": [
+              53.33333, 17.777777, 35.555553, 19.999998, 15.555554, 17.333332,
+              2.6666665, 1.3333333, 14.222221
+            ],
+            "tree_param": {
+              "num_deleted": "0",
+              "num_feature": "4",
+              "num_nodes": "9",
+              "size_leaf_vector": "0"
+            }
+          },
+          {
+            "base_weights": [
+              -0.018404953, -0.70031554, 1.1767956, -0.72631586, -0.3658537,
+              0.2926829, 1.3489933, -2.5544848e-8, -0.5172414, -0.12000003,
+              0.59999996, 0.4285714, 1.4014598
+            ],
+            "categories": [],
+            "categories_nodes": [],
+            "categories_segments": [],
+            "categories_sizes": [],
+            "default_left": [1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0],
+            "id": 2,
+            "left_children": [1, 3, 5, -1, 7, 9, 11, -1, -1, -1, -1, -1, -1],
+            "loss_changes": [
+              45.10687, 0.040575027, 2.666933, 0.0, 0.25231284, 0.6497562,
+              0.19886589, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+            ],
+            "parents": [2147483647, 0, 0, 1, 1, 2, 2, 4, 4, 5, 5, 6, 6],
+            "right_children": [2, 4, 6, -1, 8, 10, 12, -1, -1, -1, -1, -1, -1],
+            "split_conditions": [
+              4.75, 1.45, 1.75, -0.72631586, 5.75, 5.05, 4.8500004,
+              -2.5544848e-8, -0.5172414, -0.12000003, 0.59999996, 0.4285714,
+              1.4014598
+            ],
+            "split_indices": [2, 3, 3, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0],
+            "split_type": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "sum_hessian": [
+              53.33333, 34.22222, 19.11111, 30.666664, 3.5555553, 3.5555553,
+              15.555554, 1.3333333, 2.222222, 1.7777777, 1.7777777, 1.3333333,
+              14.222221
+            ],
+            "tree_param": {
+              "num_deleted": "0",
+              "num_feature": "4",
+              "num_nodes": "13",
+              "size_leaf_vector": "0"
+            }
+          }
+        ]
+      },
+      "name": "gbtree"
+    },
+    "learner_model_param": {
+      "base_score": "5E-1",
+      "boost_from_average": "1",
+      "num_class": "3",
+      "num_feature": "4",
+      "num_target": "1"
+    },
+    "objective": {
+      "name": "multi:softprob",
+      "softmax_multiclass_param": { "num_class": "3" }
+    }
+  },
+  "version": [1, 7, 5]
+}
