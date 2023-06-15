@@ -12,6 +12,8 @@ https://xgboost.readthedocs.io/en/stable/python/python_api.html#xgboost.Booster.
 https://www.youtube.com/watch?v=D0efHEJsfHo&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=42
 https://stackoverflow.com/questions/70586078/manipulation-and-interpretation-of-xgboost-models-in-python
 
+https://xgboost.readthedocs.io/en/stable/python/python_api.html#xgboost.callback.TrainingCallback.after_training
+
 
 Booster.trees_to_dataframe() might be an easy way of altering the finished trees. Need to find a way to set trees from dataframe.
 
