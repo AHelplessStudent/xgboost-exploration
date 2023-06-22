@@ -1,4 +1,0 @@
- INSIGHT by looking at json file for trained model
-    # "split_conditions": [-1.1707545e-2], "base_weights": [-1.1707545e-2], are the same when leaf
-    # or 0 sometimes for both if stump (node _id = 0)
-    # so if parent node becomes stump, either set it to 0 or base_weight
